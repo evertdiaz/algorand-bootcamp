@@ -1,0 +1,13 @@
+#pragma version 6
+int 4
+int 6
+*
+int 30
+==
+bnz main_l1
+int 1
+return
+
+main_l1:
+store 1
+return
