@@ -1,0 +1,47 @@
+#pragma version 6
+txn ApplicationID
+int 0
+==
+bnz main_l8
+txn OnCompletion
+int OptIn
+==
+bnz main_l7
+txn OnCompletion
+int CloseOut
+==
+bnz main_l6
+txna ApplicationArgs 0
+byte "register_diploma"
+==
+bnz main_l5
+err
+main_l5:
+txn Sender
+byte "registrar"
+app_global_get
+==
+assert
+txna Accounts 1
+byte "diploma"
+txna ApplicationArgs 1
+app_local_put
+txna Accounts 1
+byte "calification"
+txna ApplicationArgs 2
+btoi
+app_local_put
+int 1
+return
+main_l6:
+int 1
+return
+main_l7:
+int 1
+return
+main_l8:
+byte "registrar"
+txn Sender
+app_global_put
+int 1
+return
