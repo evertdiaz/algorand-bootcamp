@@ -1,0 +1,37 @@
+{
+  "name": "algorand-bootcamp-spanish",
+  "version": "1.0.0",
+  "description": "Bootcamp de Algorand para desarrolladores en español",
+  "main": "app.ts",
+  "scripts": {
+    "start": "npx ts-node app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evertdiaz/algorand-bootcamp.git"
+  },
+  "keywords": [
+    "algorand",
+    "blockchain",
+    "web3",
+    "bootcamp",
+    "developers",
+    "spanish",
+    "block",
+    "algo"
+  ],
+  "author": "Evert Diaz, Algorand Foundation",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evertdiaz/algorand-bootcamp/issues"
+  },
+  "homepage": "https://github.com/evertdiaz/algorand-bootcamp#readme",
+  "dependencies": {
+    "algosdk": "^1.21.0",
+    "dotenv": "^16.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23"
+  }
+}
